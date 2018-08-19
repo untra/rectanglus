@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/",
+      "sourceMap": true,
+      "module": "commonjs",
+      "target": "ES2016",
+      "jsx": "react",
+      "experimentalDecorators": true,
+      "pretty": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "baseUrl": "."
+    },
+    "include": ["./src/**/*"],
+    "exclude": ["**/*.spec.*", "node_modules"]
+  }

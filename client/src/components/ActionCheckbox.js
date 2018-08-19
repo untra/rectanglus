@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import './ActionCheckbox.css'
 
 function ActionCheckbox({ show = true, checked = false, action, children }) {

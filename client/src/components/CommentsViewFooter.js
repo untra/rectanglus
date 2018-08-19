@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import './CommentsViewFooter.css'
 
 function CommentsViewFooter({ todoId, isCreating, createComment }) {

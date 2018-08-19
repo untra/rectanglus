@@ -1,0 +1,28 @@
+{
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "parser": "babel-eslint",
+    "plugins": ["react", "lr-wcui"],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "react/jsx-uses-react": 1,
+      "react/jsx-uses-vars": 1,
+      "no-nested-ternary": 0,
+      "valid-jsdoc": 0
+    },
+    "globals": {
+      "describe": true,
+      "it": true,
+      "angular": true,
+      "window": true,
+      "beforeEach": true,
+      "afterEach": true
+    },
+    "settings": {}
+  }

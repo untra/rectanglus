@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import CommentListContainer from '../containers/CommentListContainer'
 import CommentsViewFooter from './CommentsViewFooter'
 import Loading from './Loading'

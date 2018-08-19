@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import TodosViewHeader from './TodosViewHeader'
 import TodosViewFooter from './TodosViewFooter'
 import TodosViewMain from './TodosViewMain'

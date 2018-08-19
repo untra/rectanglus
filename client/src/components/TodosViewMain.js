@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import Loading from './Loading'
 import TodoListContainer from '../containers/TodoListContainer'
 import './TodosViewMain.css'
