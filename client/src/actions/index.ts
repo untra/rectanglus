@@ -3,13 +3,15 @@ import todosActions from './todos'
 import filterActions from './filter'
 import commentsActions from './comments'
 import userActions from './user'
+import rectangleActions from './rectangles'
 
 export {
   appActions,
   todosActions,
   filterActions,
   commentsActions,
-  userActions
+  userActions,
+  rectangleActions
 }
 
 export * from './application'
@@ -17,3 +19,4 @@ export * from './todos'
 export * from './filter'
 export * from './comments'
 export * from './user'
+export * from './rectangles'

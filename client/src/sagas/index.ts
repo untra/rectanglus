@@ -1,5 +1,4 @@
-// import todosWatchers from './todos'
-// import commentsWatchers from './comments'
+import rectangleWatchers from './rectangles'
 import initialSetup from './init'
 import * as _ from 'lodash'
 
@@ -12,7 +11,6 @@ function runWatchers(watchers: watcherT[]) {
 export default function* rootSaga() {
   yield [
     initialSetup(),
-    // ...runWatchers(todosWatchers),
-    // ...runWatchers(commentsWatchers)
+    runWatchers(rectangleWatchers)
   ]
 }

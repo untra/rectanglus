@@ -1,11 +1,13 @@
 defmodule TodoApp do
+  alias TodoApp.RectangleServer
   use Application
 
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
 
     children = [
-      supervisor(TodoApp.Repo, [])
+      supervisor(TodoApp.Repo, []),
+      %{id: RectangleServer, start: {RectangleServer, :start_link, []}}
     ]
 
     dispatch = :cowboy_router.compile(hosts())
@@ -33,12 +35,13 @@ defmodule TodoApp do
 
   defp api_routes do
     [
-      {"/registrations", TodoApp.RegistrationsHandler, []},
-      {"/current_user", TodoApp.CurrentUserHandler, []},
-      {"/todos", TodoApp.TodosHandler, []},
-      {"/todos/:id", TodoApp.TodoHandler, []},
-      {"/todos/:todo_id/comments", TodoApp.CommentsHandler, []},
-      {"/todos/:todo_id/comments/:comment_id", TodoApp.CommentHandler, []},
+      {"/rectangles", TodoApp.RectangleHandler, []},
+      # {"/registrations", TodoApp.RegistrationsHandler, []},
+      # {"/current_user", TodoApp.CurrentUserHandler, []},
+      # {"/todos", TodoApp.TodosHandler, []},
+      # {"/todos/:id", TodoApp.TodoHandler, []},
+      # {"/todos/:todo_id/comments", TodoApp.CommentsHandler, []},
+      # {"/todos/:todo_id/comments/:comment_id", TodoApp.CommentHandler, []},
     ]
   end
 

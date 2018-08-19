@@ -1,17 +1,16 @@
-defmodule Mix.RectangleServer do
-  alias TodoApp.Rectangle
+defmodule TodoApp.RectangleServer do
   use Agent
-  @MAX_RECTS 200
 
-  def start_link(_) do
+  def start_link() do
     Agent.start_link(fn -> [] end, name: __MODULE__)
   end
 
 
   @doc "adds a rect to the list"
   def put_rect(rect) do
-    Agent.update(__MODULE__, fn rects ->
-      [rect|rects] |> Enum.take(@MAX_RECTS)
+    Agent.get_and_update(__MODULE__, fn rects ->
+      updated_rects = [rect|rects] |> Enum.take(200)
+      {updated_rects, updated_rects}
     end)
   end
 
