@@ -15,7 +15,7 @@ function buildHeaders() {
   const defaultHeaders = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
-    'Authorization': `Bearer ${getAuthToken()}`
+    // 'Authorization': `Bearer ${getAuthToken()}`
   }
 
   return new Headers({

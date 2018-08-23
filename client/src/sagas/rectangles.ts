@@ -20,7 +20,6 @@ function* fetchRectangles(action?: AnyAction) {
 function* createRectangle(action?: AnyAction) {
   if (!action) { return }
   try {
-    if (!action) { throw new Error('no action provided') }
     const response = yield call(rectanglesApi.createRectangle, action.payload)
     yield put(rectangleActions.setRectangle(response.data))
   } catch (e) {

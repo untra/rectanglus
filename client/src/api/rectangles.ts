@@ -1,7 +1,7 @@
 import {
     apiURL,
     httpGet,
-    httpPost,
+    httpUpdate,
   } from '../utils/http'
 import { RectangleT } from '../constants'
 
@@ -10,10 +10,10 @@ import { RectangleT } from '../constants'
     createRectangle,
   }
 
-  export function getRectangles({}: any) {
+  export function getRectangles({}: object) {
     return httpGet(`${apiURL}/rectangles`)
   }
 
   export function createRectangle({ rectangle }: { rectangle: RectangleT }) {
-    return httpPost(`${apiURL}/rectangles`, rectangle)
+    return httpUpdate(`${apiURL}/rectangles`, rectangle)
   }

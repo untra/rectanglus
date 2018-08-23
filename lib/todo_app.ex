@@ -6,7 +6,8 @@ defmodule TodoApp do
     import Supervisor.Spec, warn: false
 
     children = [
-      supervisor(TodoApp.Repo, []),
+      # disabled to prevent access to a database
+      # supervisor(TodoApp.Repo, []),
       %{id: RectangleServer, start: {RectangleServer, :start_link, []}}
     ]
 
@@ -38,10 +39,6 @@ defmodule TodoApp do
       {"/rectangles", TodoApp.RectangleHandler, []},
       # {"/registrations", TodoApp.RegistrationsHandler, []},
       # {"/current_user", TodoApp.CurrentUserHandler, []},
-      # {"/todos", TodoApp.TodosHandler, []},
-      # {"/todos/:id", TodoApp.TodoHandler, []},
-      # {"/todos/:todo_id/comments", TodoApp.CommentsHandler, []},
-      # {"/todos/:todo_id/comments/:comment_id", TodoApp.CommentHandler, []},
     ]
   end
 

@@ -1,7 +1,6 @@
 import { rectangleTypes, RectangleT } from '../constants'
 
 export const fetchRectanglesRequest = () => {
-  console.log('requesting rectangles!!')
   return {
     type: rectangleTypes.FETCH_RECTANGLES_REQUEST,
     payload: {}

@@ -6,9 +6,9 @@ defmodule TodoApp.RectangleView do
       data: Enum.map(rectangles, & render(:rectangle, %{rectangle: &1}))
     }
   end
-  def render(:show, %{rectangle: rectangle}) do
+  def render(:show, %{rectangles: rectangles}) do
     %{
-      data: render(:rectangle, %{rectangle: rectangle})
+      data: render(:rectangle, %{rectangles: rectangles})
     }
   end
   def render(:rectangle, %{rectangle: rectangle}) do

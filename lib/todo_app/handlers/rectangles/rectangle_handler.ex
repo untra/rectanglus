@@ -9,18 +9,18 @@ defmodule TodoApp.RectangleHandler do
   # REST Handlers
 
   def index(req, _user, _params) do
-    IO.inspect fn ->  "NOISE!" end
     rectangles = RectangleServer.all_rect()
     req
-    |> set_body(render(:show, rectangles: rectangles))
+    |> set_body(render(:index, rectangles: rectangles))
     |> reply(200)
   end
 
   def update(req, _user, params) do
-    rectangle = %Rectangle{x0: params[:x0], y0: params[:y0], x1: params[:x1], y1: params[:y1]}
+    body = params.body
+    rectangle = %Rectangle{x0: body["x0"], y0: body["y0"], x1: body["x1"], y1: body["y1"]}
     rectangles = RectangleServer.put_rect(rectangle)
     req
-    |> set_body(render(:show, rectangles: rectangles))
+    |> set_body(render(:index, rectangles: rectangles))
     |> reply(200)
   end
 end
