@@ -1,4 +1,4 @@
-defmodule TodoApp.Handler.Helpers do
+defmodule Rectanglus.Handler.Helpers do
   def set_body(req, body) do
     body = Poison.encode!(body)
     :cowboy_req.set_resp_body(body, req)

@@ -2,12 +2,12 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
-config :todo_app, ecto_repos: [TodoApp.Repo]
+config :todo_app, ecto_repos: [Rectanglus.Repo]
 
 config :guardian, Guardian,
   allowed_algos: ["HS512"],
   verify_module: Guardian.JWT,
-  issuer: "TodoApp",
+  issuer: "Rectanglus",
   ttl: {30, :days},
   allowed_drift: 2000,
   verify_issuer: true,
@@ -17,7 +17,7 @@ config :guardian, Guardian,
     "kty" => "oct",
     "use" => "sig"
   },
-  serializer: TodoApp.GuardianSerializer
+  serializer: Rectanglus.GuardianSerializer
 
 
 import_config "#{Mix.env}.exs"

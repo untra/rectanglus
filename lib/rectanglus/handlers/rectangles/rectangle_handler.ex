@@ -1,9 +1,9 @@
-defmodule TodoApp.RectangleHandler do
-  alias TodoApp.{Entity, Rectangle, RectangleServer}
+defmodule Rectanglus.RectangleHandler do
+  alias Rectanglus.{Entity, Rectangle, RectangleServer}
 
   use Entity.BaseHandler
 
-  import TodoApp.RectangleView, only: [render: 2]
+  import Rectanglus.RectangleView, only: [render: 2]
 
 
   # REST Handlers

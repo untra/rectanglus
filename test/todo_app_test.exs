@@ -1,6 +1,6 @@
-defmodule TodoAppTest do
+defmodule RectanglusTest do
   use ExUnit.Case
-  doctest TodoApp
+  doctest Rectanglus
 
   test "the truth" do
     assert 1 + 1 == 2

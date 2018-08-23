@@ -1,10 +1,10 @@
-defmodule TodoApp.BaseHandler do
+defmodule Rectanglus.BaseHandler do
   defmacro __using__(_opts) do
     quote do
-      alias TodoApp.Repo
+      alias Rectanglus.Repo
       import Ecto
       import Ecto.Query
-      import TodoApp.Handler.Helpers
+      import Rectanglus.Handler.Helpers
 
       # Default REST Callbacks
 

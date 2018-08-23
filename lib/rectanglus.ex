@@ -1,5 +1,5 @@
-defmodule TodoApp do
-  alias TodoApp.RectangleServer
+defmodule Rectanglus do
+  alias Rectanglus.RectangleServer
   use Application
 
   def start(_type, _args) do
@@ -7,7 +7,7 @@ defmodule TodoApp do
 
     children = [
       # disabled to prevent access to a database
-      # supervisor(TodoApp.Repo, []),
+      # supervisor(Rectanglus.Repo, []),
       %{id: RectangleServer, start: {RectangleServer, :start_link, []}}
     ]
 
@@ -17,7 +17,7 @@ defmodule TodoApp do
       %{env: %{dispatch: dispatch}}
     )
 
-    opts = [strategy: :one_for_one, name: TodoApp.Supervisor]
+    opts = [strategy: :one_for_one, name: Rectanglus.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
@@ -36,9 +36,9 @@ defmodule TodoApp do
 
   defp api_routes do
     [
-      {"/rectangles", TodoApp.RectangleHandler, []},
-      # {"/registrations", TodoApp.RegistrationsHandler, []},
-      # {"/current_user", TodoApp.CurrentUserHandler, []},
+      {"/rectangles", Rectanglus.RectangleHandler, []},
+      # {"/registrations", Rectanglus.RegistrationsHandler, []},
+      # {"/current_user", Rectanglus.CurrentUserHandler, []},
     ]
   end
 

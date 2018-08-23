@@ -1,4 +1,4 @@
-defmodule TodoApp.Mixfile do
+defmodule Rectanglus.Mixfile do
   use Mix.Project
 
   def project do
@@ -15,7 +15,7 @@ defmodule TodoApp.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [mod: {TodoApp, []},
+    [mod: {Rectanglus, []},
      applications: [:logger, :cowboy, :ecto, :postgrex, :env],
      included_applications: [:plug, :guardian, :poison, :faker]]
   end

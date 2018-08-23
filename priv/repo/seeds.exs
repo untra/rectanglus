@@ -1,4 +1,4 @@
-# alias TodoApp.{Repo, Todo, Comment}
+# alias Rectanglus.{Repo, Todo, Comment}
 #
 # todos = Repo.all(Todo)
 #
@@ -12,7 +12,7 @@
 #   end
 # end
 
-# alias TodoApp.{Repo, User, GuardianSerializer}
+# alias Rectanglus.{Repo, User, GuardianSerializer}
 # user = Repo.insert!(%User{})
 # { :ok, jwt, encoded_claims } = Guardian.encode_and_sign(user, :access)
 # { :ok, claims } = Guardian.decode_and_verify(jwt)

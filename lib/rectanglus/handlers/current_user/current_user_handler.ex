@@ -1,12 +1,12 @@
-defmodule TodoApp.CurrentUserHandler do
-  alias TodoApp.{Entity, Authorization}
+defmodule Rectanglus.CurrentUserHandler do
+  alias Rectanglus.{Entity, Authorization}
 
   use Entity.BaseHandler
   use Authorization.BaseHandler
 
-  import TodoApp.UserView, only: [render: 2]
+  import Rectanglus.UserView, only: [render: 2]
 
-  # REST Handlers Overrides (TodoApp.Entity.BaseHandler)
+  # REST Handlers Overrides (Rectanglus.Entity.BaseHandler)
 
   def allowed_methods(req, state) do
     {["GET", "OPTIONS"], req, state}

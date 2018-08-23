@@ -1,4 +1,4 @@
-defmodule TodoApp.RectangleServer do
+defmodule Rectanglus.RectangleServer do
   use Agent
 
   def start_link() do

@@ -1,5 +1,5 @@
-defmodule TodoApp.UserView do
-  use TodoApp.BaseView
+defmodule Rectanglus.UserView do
+  use Rectanglus.BaseView
 
   def render(:show, %{user: user}) do
     %{

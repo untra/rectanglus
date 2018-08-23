@@ -1,12 +1,12 @@
-defmodule TodoApp.Entity.BaseHandler do
+defmodule Rectanglus.Entities.BaseHandler do
   defmacro __using__(_opts) do
     quote do
-      use TodoApp.BaseHandler
+      use Rectanglus.BaseHandler
 
       # Default REST Callbacks
 
       def allowed_methods(req, state) do
-        {["GET", "OPTIONS", "PUT", "PATCH", "DELETE"], req, state}
+        {["GET", "OPTIONS", "POST"], req, state}
       end
 
       # Overridable Functions

@@ -1,4 +1,4 @@
-defmodule TodoApp.Repo.Migrations.CreateUsersTable do
+defmodule Rectanglus.Repo.Migrations.CreateUsersTable do
   use Ecto.Migration
 
   def change do

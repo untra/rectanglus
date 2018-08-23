@@ -1,4 +1,4 @@
-defmodule TodoApp.Repo.Migrations.CreateCommentTable do
+defmodule Rectanglus.Repo.Migrations.CreateCommentTable do
   use Ecto.Migration
 
   def change do

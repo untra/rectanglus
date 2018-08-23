@@ -1,5 +1,5 @@
-defmodule TodoApp.RectangleView do
-  use TodoApp.BaseView
+defmodule Rectanglus.RectangleView do
+  use Rectanglus.BaseView
 
   def render(:index, %{rectangles: rectangles}) do
     %{

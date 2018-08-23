@@ -1,4 +1,4 @@
-defmodule TodoApp.Repo.Migrations.AddDescriptionToTodoTable do
+defmodule Rectanglus.Repo.Migrations.AddDescriptionToTodoTable do
   use Ecto.Migration
 
   def change do

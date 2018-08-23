@@ -1,6 +1,6 @@
-defmodule TodoApp.Repo do
+defmodule Rectanglus.Repo do
   use Ecto.Repo, otp_app: :todo_app
-
+  # commented out in the app
   def init(_, opts) do
     Application.start(:env)
 

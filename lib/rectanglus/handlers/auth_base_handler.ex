@@ -1,7 +1,7 @@
-defmodule TodoApp.Authorization.BaseHandler do
+defmodule Rectanglus.Authorization.BaseHandler do
   defmacro __using__(_opts) do
     quote do
-      import TodoApp.Authorization.Helpers
+      import Rectanglus.Authorization.Helpers
 
       def is_authorized(req, state) do
         method = :cowboy_req.method(req)
